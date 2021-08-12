@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import ShowDropDown from "./components/ShowDropDown";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [check, setCheck] = useState(false);
+  const handleCheck = () => {
+    setCheck(false);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <h1>Choose You'r Item</h1>
+      <div>
+        <h3
+          className={check ? "select_button" : "select_button active"}
+          onMouseEnter={() => setCheck(true)}
+          // onMouseLeave={() => setCheck(false)}
         >
-          Learn React
-        </a>
-      </header>
+          Select
+        </h3>
+      </div>
+      {check && <ShowDropDown handleCheck={handleCheck} check={check} />}
     </div>
   );
-}
+};
 
 export default App;

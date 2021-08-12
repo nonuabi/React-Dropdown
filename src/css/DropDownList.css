@@ -1,0 +1,30 @@
+.DropDownList {
+  background-color: #8ac6d1;
+}
+.DropDownList li:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #f9bcdd;
+}
+.item_list_container {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item_list {
+  width: 100px;
+  height: 40px;
+  list-style: none;
+  color: #fff;
+  margin: 7px 3px;
+  padding: 5px;
+  border: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-family: math;
+}
